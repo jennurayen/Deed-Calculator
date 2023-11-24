@@ -56,6 +56,7 @@ btn.forEach((btn) => {
             e_pay = 0;
         } else if (100001 <= inputValue && inputValue <= 500000) {
             office = 600;
+            e_pay = 150;
         } else {
             office = 700;
             e_pay = 150;
