@@ -25,9 +25,7 @@ let law_clerk = 500;
 
 
 btn.forEach((btn) => {
-    btn.addEventListener("click", () => {
-
-        
+    btn.addEventListener("click", () => {        
         let inputValue = parseFloat(input.value);
 
         if(inputValue >= 100){
@@ -38,23 +36,19 @@ btn.forEach((btn) => {
         }
 
         // // copy 
-        if (0 <= inputValue && inputValue <= 30000) {
-            copy = 400;
-        } else if (30001 <= inputValue && inputValue <= 100000) {
+        if (inputValue <= 500000) {
             copy = 500;
-        } else if (100001 <= inputValue && inputValue <= 500000) {
-            copy = 600;
-        } else if (500001 <= inputValue && inputValue <= 999999) {
-            copy = 800;
-        } else {
-            copy = 2500;
-        };
+        } else if (500001 >= inputValue && inputValue <= 999999) {
+            copy = 700;
+        } else if (1000000 >= inputValue ) {
+            copy = 1000;
+        } 
 
         // // office
         if (inputValue <= 100000) {
             office = 350;
             e_pay = 0;
-        } else if (100001 <= inputValue && inputValue <= 500000) {
+        } else if (100000 >= inputValue && inputValue <= 500000) {
             office = 600;
             e_pay = 150;
         } else {
