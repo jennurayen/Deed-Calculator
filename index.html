@@ -1,121 +1,171 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DeedPlus+</title>
+    <!-- google font link  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+      rel="stylesheet"
+    />
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="responsive.css" />
+    <link rel="stylesheet" href="slider.css" />
+  </head>
+  <body>
+    <section class="hero">
+      <nav>
+        <div class="logo"><a href="/">Rayen</a></div>
+        <div class="menu-icon">|||</div>
+        <div class="menu-list js-menu-hide">
+          <!-- <ul class="link">
+            <li><a href="/">Home</a></li>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Services</a></li>
+          </ul> -->
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
-
-        <link rel="stylesheet" href="css/style.css">
-    <title>Deed Calculator</title>
-</head>
-
-<body>
-    <div class="container">
-        <div class="row">
-            <div class="col-12">
-                <div class="header">
-                    <h1>Deed Calculator <i class="bi bi-code-slash"></i></h1>
-                    <div class="power">
-                        <span>Powered by: </span>
-                    JENNU RAYEN
-                    </div>
-                </div>
-                <input id="input" type="number">
-                <div class="btns">
-                    <button id="sale" class="btn sale btn-outline-danger">SALE কোবলা</button>
-                    <button id="gift" class="btn gift btn-outline-primary">GIFT হেবা</button>
-                </div>
-
-            </div>
-            <div class="col-12">
-                <div id="output" class="output">
-                    <table class="table table-striped">
-
-                        <thead>
-                            <tr class="table-dark">
-                                <th scope="col">#</th>
-                                <th scope="col">বাজার মূল্য</th>
-                                <th scope="col" id="market_rate">00</th>
-                            </tr>
-                        </thead>
-
-                        <tbody>
-
-                            <tr>
-                                <th scope="row">১</th>
-                                <td>স্ট্যাম্প</td>
-                                <td id="stamp_rate">00</td>
-                            </tr>
-
-                            <tr>
-                                <th scope="row">২</th>
-                                <td>ফী</td>
-                                <td id="fee_rate">00</td>
-                            </tr>
-
-                            <tr>
-                                <th scope="row">৩</th>
-                                <td>কপি</td>
-                                <td id="copy_rate">00</td>
-                            </tr>
-
-                            <tr>
-                                <th scope="row">৪</th>
-                                <td>অফিস</td>
-                                <td id="office_rate">00</td>
-                            </tr>
-
-                            <tr>
-                                <th scope="row">৫</th>
-                                <td>কম্পিউটার টাইপ</td>
-                                <td>150</td>
-                            </tr>
-
-                            <tr>
-                                <th scope="row">৬</th>
-                                <td>ই- পেমেন্ট</td>
-                                <td id="e_pay_rate">150</td>
-                            </tr>
-
-                            <tr>
-                                <th scope="row">৭</th>
-                                <td>সেরেস্থা</td>
-                                <td>350</td>
-                            </tr>
-
-
-                            <tr>
-                                <th scope="row">৮</th>
-                                <td>ল.ক্লার্ক</td>
-                                <td>500</td>
-                            </tr>
-
-
-                            <tr class="table-primary">
-                                <th scope="row"></th>
-                                <td>মোট</td>
-                                <td id="totol_rate">00</td>
-                            </tr>
-
-                        </tbody>
-
-                    </table>
-                </div>
-            </div>
+          <a class="download" download="Deed Plus.apk" href="files/deedplus.apk"
+            >Download</a
+          >
         </div>
+      </nav>
+      <main>
+        <div class="text-area">
+          <h1 class="heading">
+            Deed<span>Plus</span><span>+<br /></span> Application
+          </h1>
+          <p class="tag-ling">
+            Easy to calculate your deed registration cost. Just OneClick
+          </p>
+
+          <a class="download" download="Deed Plus.apk" href="files/deedplus.apk"
+            >Download</a
+          >
+        </div>
+        <div class="image-area">
+          <img src="images/heroImg.png" alt="" />
+        </div>
+      </main>
+    </section>
+
+    <!-- image slider start -->
+    <div class="wrapper">
+      <div class="container">
+        <div class="card">
+          <img src="images/img (1).png" alt="img 1" />
+        </div>
+
+        <div class="card">
+          <img src="images/img (2).png" alt="img 2" />
+        </div>
+
+        <div class="card">
+          <img src="images/img (3).png" alt="img 3" />
+        </div>
+
+        <div class="card">
+          <img src="images/img (4).png" alt="img 4" />
+        </div>
+
+        <div class="card">
+          <img src="images/img (5).png" alt="img 5" />
+        </div>
+
+        <div class="card">
+          <img src="images/img (6).png" alt="img 6" />
+        </div>
+      </div>
     </div>
 
+    <div class="btn">
+      <div id="prev">
+        <img src="https://img.icons8.com/ios-filled/50/back.png" alt="prev" />
+      </div>
+      <div id="next">
+        <img
+          src="https://img.icons8.com/ios-filled/50/forward--v1.png"
+          alt="next"
+        />
+      </div>
+    </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
-        crossorigin="anonymous"></script>
+    <section class="features">
+      <h2>App Features</h2>
+      <div class="features-container">
+        <div class="feature-card">
+          <i class="fas fa-calculator"></i>
+          <h3>Instant Cost Calculation</h3>
+          <p>
+            Enter the market value of the property and instantly get the
+            breakdown of all associated costs such as stamp duty, registration
+            fees, and office charges.
+          </p>
+        </div>
+        <div class="feature-card">
+          <i class="fas fa-map-marker-alt"></i>
+          <h3>Customizable Settings</h3>
+          <p>
+            Users can customize or adjust certain costs manually in the
+            settings. This allows flexibility for regions or states where the
+            fees may differ, or in case there are special exemptions.
+          </p>
+        </div>
+        <div class="feature-card">
+          <i class="fas fa-chart-pie"></i>
+          <h3>Breakdown of Costs</h3>
+          <p>
+            Display a detailed breakdown of all the fees with clear itemization,
+            so users know exactly what they are paying for.
+          </p>
+        </div>
+        <div class="feature-card">
+          <i class="fas fa-mobile-alt"></i>
+          <h3>Free to Use</h3>
+          <p>
+            All calculations and features of the app are completely free for
+            users, offering maximum utility without any hidden costs or premium
+            subscriptions.
+          </p>
+        </div>
+      </div>
+    </section>
 
-        <script src="js/main.js"></script>
-</body>
+    <footer>
+      <div class="footer-container">
+        <div class="footer-logo">
+          <a href="#">DeedPlus</a>
+          <p>Your trusted app for calculating deed registry fees.</p>
+        </div>
+        <!-- <div class="footer-links">
+          <h3>Quick Links</h3>
+          <ul> -->
+        <!-- <li><a href="#">Home</a></li>
+            <li><a href="#">Features</a></li>
+            <li><a href="#">About</a></li> -->
+        <!-- </ul>
+        </div> -->
 
+        <div class="footer-contact">
+          <h3>Contact Us</h3>
+          <p>
+            Email:
+            <a href="mailto:jennurayen@gmail.com">jennurayen@gmail.com</a>
+          </p>
+          <p>Phone: +91 876-8654-884</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>
+          © 2024 DeedPlus. All rights reserved. |
+          <!-- <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a> -->
+        </p>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
 </html>
