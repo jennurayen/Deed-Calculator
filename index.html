@@ -22,18 +22,7 @@
         <div class="logo"><a href="/">Rayen</a></div>
         <div class="menu-icon">|||</div>
         <div class="menu-list js-menu-hide">
-          <!-- <ul class="link">
-            <li><a href="/">Home</a></li>
-            <li><a href="#">About Us</a></li>
-            <li><a href="#">Services</a></li>
-          </ul> -->
-
-          <a
-            class="download"
-            download="Deed Plus.apk"
-            href="files/deedplus+.apk"
-            >Download</a
-          >
+          <a class="download" href="#">Download</a>
         </div>
       </nav>
       <main>
@@ -45,12 +34,7 @@
             Easy to calculate your deed registration cost. Just OneClick
           </p>
 
-          <a
-            class="download"
-            download="Deed Plus.apk"
-            href="files/deedplus+.apk"
-            >Download</a
-          >
+          <a class="download" id="download-btn" href="#">Download</a>
         </div>
         <div class="image-area">
           <img src="images/heroImg.png" alt="" />
@@ -146,14 +130,6 @@
           <a href="#">DeedPlus</a>
           <p>Your trusted app for calculating deed registry fees.</p>
         </div>
-        <!-- <div class="footer-links">
-          <h3>Quick Links</h3>
-          <ul> -->
-        <!-- <li><a href="#">Home</a></li>
-            <li><a href="#">Features</a></li>
-            <li><a href="#">About</a></li> -->
-        <!-- </ul>
-        </div> -->
 
         <div class="footer-contact">
           <h3>Contact Us</h3>
@@ -165,13 +141,43 @@
         </div>
       </div>
       <div class="footer-bottom">
-        <p>
-          © 2024 DeedPlus. All rights reserved. |
-          <!-- <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a> -->
-        </p>
+        <p>© 2024 DeedPlus. All rights reserved. |</p>
       </div>
     </footer>
 
+    <script src="https://cdn.jsdelivr.net/npm/appwrite@16.0.0"></script>
     <script src="script.js"></script>
+    <script>
+      // Initialize the Appwrite Client
+      const client = new Appwrite.Client();
+
+      // Set your Appwrite endpoint and project ID
+      client
+        .setEndpoint("https://[YOUR_APPWRITE_ENDPOINT]/v1") // Replace with your Appwrite endpoint
+        .setProject("66f35d650019a5b0dcd8"); // Replace with your Project ID
+
+      // Initialize the Storage Service
+      const storage = new Appwrite.Storage(client);
+
+      // File ID of the file you uploaded in Appwrite Storage
+      const fileId = "66f362920007baaf9094"; // Replace with your file ID
+
+      // Function to handle file download
+      const downloadFile = async () => {
+        try {
+          const response = storage.getFileDownload(fileId);
+
+          // Open the file in a new tab
+          window.open(response.href, "_blank");
+        } catch (error) {
+          console.error("Error downloading file:", error);
+        }
+      };
+
+      // Add event listener to the button
+      document
+        .getElementById("download-btn")
+        .addEventListener("click", downloadFile);
+    </script>
   </body>
 </html>
