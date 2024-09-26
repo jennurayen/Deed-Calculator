@@ -22,7 +22,7 @@
         <div class="logo"><a href="/">Rayen</a></div>
         <div class="menu-icon">|||</div>
         <div class="menu-list js-menu-hide">
-          <a class="download" href="#">Download</a>
+          <a class="download" download href="apk/deedplus.apk"> Download </a>
         </div>
       </nav>
       <main>
@@ -34,7 +34,7 @@
             Easy to calculate your deed registration cost. Just OneClick
           </p>
 
-          <a class="download" id="download-btn" href="#">Download</a>
+          <a class="download" download href="apk/deedplus.apk"> Download </a>
         </div>
         <div class="image-area">
           <img src="Images/heroImg.png" alt="" />
@@ -145,42 +145,6 @@
       </div>
     </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/appwrite@16.0.0"></script>
     <script src="script.js"></script>
-    <script>
-      const client = new Appwrite.Client();
-      client
-        .setEndpoint("https://cloud.appwrite.io/v1")
-        .setProject("66f35d650019a5b0dcd8");
-
-      // Initialize the Storage Service
-      const storage = new Appwrite.Storage(client);
-
-      const bucketId = "66f35e2900329b769dd6";
-      const fileId = "66f4403600190c01bb54";
-
-      const handleDownload = async () => {
-        try {
-          // Get the download URL
-          const result = await storage.getFileDownload(bucketId, fileId);
-          console.log(result);
-
-          // Create a temporary link to trigger the download
-          const link = document.createElement("a");
-          link.href = result;
-          link.setAttribute("download", "DeedPlus.apk");
-          document.body.appendChild(link);
-          link.click();
-          link.remove();
-        } catch (error) {
-          console.error("Error downloading file:", error);
-        }
-      };
-      // Add event listener to the button
-      let btnDownload = document.querySelectorAll(".download");
-      btnDownload.forEach((btn) => {
-        btn.addEventListener("click", handleDownload);
-      });
-    </script>
   </body>
 </html>
